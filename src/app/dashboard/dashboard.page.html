@@ -1,0 +1,76 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+ -->
+ <ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <!--barra para menu--->
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+    <ion-content [routerLink]="['/home']" class="ion-padding">cerrar sesion</ion-content>
+    <ion-content class="ion-padding">perfil</ion-content>
+  </ion-header>
+ 
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <!--iincio del deshboard-->
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>SMART GARDEN</ion-title>
+    </ion-toolbar>
+    <!--inicio del buscador-->
+    <ion-searchbar></ion-searchbar>
+     <!--final del buscador-->
+  </ion-header>
+  <ion-content class="ion-padding">
+    <!--inicio de las cartas-->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Plantas</ion-card-title>
+        <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <img alt="Silhouette of mountains" src="https://img.freepik.com/foto-gratis/cerrar-imagen-arbol-joven-planta-creciendo_1150-28356.jpg" />
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+     <!--inicio de las cartas-->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Riego Automaticos</ion-card-title>
+       <!--  <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <img alt="Silhouette of mountains" src="https://estag.fimagenes.com/img/v2/7e5/1100858_538730_900.jpg" />
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+     <!--inicio de las cartas-->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title [routerLink]="['/temperatura-y-humedad']">Temperatura y Humedad</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <img [routerLink]="['/temperatura-y-humedad']" alt="Silhouette of mountains" src="https://invernaderomini.online/wp-content/uploads/2022/04/termometro-e-higrometro-para-invernadero.jpg" />
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
+     <!--fin de las cartas-->
+  </ion-content>
+   <!--inicio del contenedor de las cartas-->
+</div>
+
