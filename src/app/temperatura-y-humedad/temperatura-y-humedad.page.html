@@ -9,8 +9,10 @@
 </ion-content> -->
 <ion-header>
   <ion-toolbar>
-    <ion-button [routerLink]="['/dashboard']">exit</ion-button>
-    <ion-title>Humedad y Temperatura</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Humedad y Temperatura</ion-title>
   </ion-toolbar>
   <!--inicio de las cartas-->
   <ion-card>
@@ -18,27 +20,30 @@
       <ion-card-title>Card Title</ion-card-title> 
       <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
     </ion-card-header> -->
-    <ion-card-content>
+    <ion-card-content class="color">
       <ion-list>
-        <ion-item>
+        <ion-item class="planta">
           <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://imagenes.elpais.com/resizer/2rqZIRpYpNkmWWwkLbe2UpQCfjM=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/PWEFTQUKYXTYCME3Y7AAW6O7E4.jpg" />
+            <img alt="Silhouette of mountains" src="https://i5.walmartimages.com/asr/00d9afb4-8ded-4666-b6de-c8682107b999.6e05b97b7540ff69509aaa6d3bad22d9.jpeg" />
           </ion-thumbnail>
-          <ion-label>Temperatura</ion-label>
+          <ion-label class="planta">Planta:"Lengua de vaca"</ion-label>
+          <ion-button [routerLink]="['/#']">Monitorear</ion-button>
         </ion-item>
   
         <ion-item>
           <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://www.metroworldnews.com/resizer/dESLs1U_QcDC0v7A-QH0dNmJYV0=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/QAOGUDVYANCRLEWXAO2DNUFNJE.jpg" />
+            <img alt="Silhouette of mountains" src="https://http2.mlstatic.com/D_NQ_NP_802994-MLM53023141747_122022-O.jpg" />
           </ion-thumbnail>
-          <ion-label>Temperatura</ion-label>
+          <ion-label class="planta">Planta:"Corona de cristo"</ion-label>
+          <ion-button [routerLink]="['/#']">Monitorear</ion-button>
         </ion-item>
   
         <ion-item>
           <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://images.hola.com/imagenes/decoracion/20220705213111/plantas-interior-decorativas-mc/1-110-635/plantas-decorativas-5-a.jpg" />
+            <img alt="Silhouette of mountains" src="https://api.floriday.io/images/db89a836-497e-48c5-9e66-fcc700f058dd.jpg?width=360&height=360&crop=pad" />
           </ion-thumbnail>
-          <ion-label>Temperatura</ion-label>
+          <ion-label class="planta">planta:"Prunus lusitanica"</ion-label>
+          <ion-button [routerLink]="['/#']">Monitorear</ion-button>
         </ion-item>
   
       </ion-list>

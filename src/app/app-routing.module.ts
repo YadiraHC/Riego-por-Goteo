@@ -28,6 +28,10 @@ const routes: Routes = [
   {
     path: 'temperatura-y-humedad',
     loadChildren: () => import('./temperatura-y-humedad/temperatura-y-humedad.module').then( m => m.TemperaturaYHumedadPageModule)
+  },
+  {
+    path: 'control',
+    loadChildren: () => import('./control/control.module').then( m => m.ControlPageModule)
   }
 
 ];
