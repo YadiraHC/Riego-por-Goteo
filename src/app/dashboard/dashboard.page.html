@@ -14,13 +14,24 @@
       <!--barra para menu--->
       <ion-title>Menu</ion-title>
     </ion-toolbar>
-    <ion-content [routerLink]="['/home']" class="ion-padding">cerrar sesion</ion-content>
-    <ion-content class="ion-padding">perfil</ion-content>
+      <!-- inicio modo noche -->
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="moon"></ion-icon>
+      <ion-label>Toggle Dark Theme </ion-label>
+      <ion-toggle slot="end"
+          [ngModel]="darkMode"
+          (ionChange)="cambio()"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <!-- fin de modo noche -->
+  <ion-button [routerLink]="['/home']" class="ion-padding">cerrar sesion</ion-button>
+<!--     <ion-button class="ion-padding">perfil</ion-button> -->
+     <!--fin de la barra para menu--->
   </ion-header>
- 
 </ion-menu>
 <div class="ion-page" id="main-content">
-  <!--iincio del deshboard-->
+  <!--incio del deshboard-->
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -34,30 +45,16 @@
   </ion-header>
   <ion-content class="ion-padding">
     <!--inicio de las cartas-->
-    <ion-card>
-      <ion-card-header class="color">
-        <ion-card-title class="titulos">Plantas</ion-card-title>
-        <!--<ion-card-subtitle>Card Subtitle</ion-card-subtitle>-->
-      </ion-card-header>
-    
-      <ion-card-content class="fondo">
-        <div class="img">
-        <img alt="Silhouette of mountains" src="https://img.freepik.com/foto-gratis/cerrar-imagen-arbol-joven-planta-creciendo_1150-28356.jpg" />
-        </div>
-        <h1>Vista de todas las plantas en el jardin polinizador</h1>
-        
-      </ion-card-content>
-    </ion-card>
      <!--inicio de las cartas-->
     <ion-card>
       <ion-card-header class="color">
-        <ion-card-title class="titulos">Riego Automaticos</ion-card-title>
+        <ion-card-title class="titulos" [routerLink]="['/control']" >Area 1</ion-card-title>
        <!--  <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
       </ion-card-header>
     
       <ion-card-content class="fondo">
         <div class="img">
-        <img alt="Silhouette of mountains" src="https://estag.fimagenes.com/img/v2/7e5/1100858_538730_900.jpg" />
+        <img [routerLink]="['/control']" alt="Silhouette of mountains" src="https://estag.fimagenes.com/img/v2/7e5/1100858_538730_900.jpg" />
        </div>
         <h1>Monitoreo del riego y control en su suministro de agua</h1>
       </ion-card-content>
@@ -65,21 +62,19 @@
      <!--inicio de las cartas-->
     <ion-card>
       <ion-card-header class="color">
-        
-        <ion-card-title class="titulos" [routerLink]="['/temperatura-y-humedad']">Temperatura y Humedad</ion-card-title>
+        <ion-card-title class="titulos" [routerLink]="['/control']">Area 2</ion-card-title>
        
         <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
       </ion-card-header>
     
       <ion-card-content class="fondo">
         <div class="img">
-        <img [routerLink]="['/temperatura-y-humedad']" alt="Silhouette of mountains" src="https://invernaderomini.online/wp-content/uploads/2022/04/termometro-e-higrometro-para-invernadero.jpg" />
+        <img [routerLink]="['/control']" alt="Silhouette of mountains" src="https://invernaderomini.online/wp-content/uploads/2022/04/termometro-e-higrometro-para-invernadero.jpg" />
         </div>
         <h1>Monitoreo de la temperatura y humedad el suelo</h1>
       </ion-card-content>
     </ion-card>
      <!--fin de las cartas-->
   </ion-content>
-   <!--inicio del contenedor de las cartas-->
 </div>
 
