@@ -1,17 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+ <ion-content class="ion-padding">
+  <ion-card color="danger">
+  <ion-card-header>
+    <ion-card-title>Temperatura y</ion-card-title>
+    <ion-card-title>Humedad</ion-card-title>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  </ion-card-header>
+</ion-card>   
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+ <ion-img src="https://static.vecteezy.com/system/resources/previews/009/664/681/non_2x/water-drop-icon-transparent-free-png.png" ></ion-img>
+<p>80%</p>
+<ion-img class="2" src="https://images.edrawsoft.com/articles/line-graph/line-chart-2.png" ></ion-img>
++
+ </ion-content>
+
+ <style>
+  ion-content::part(background) {
+  background:white;
+  
+}
+
+ion-content::part(scroll) {
+  color: #fff;
+}
+
+ion-img{
+  height: 130px;
+  position: relative;
+  top: 20px;
+  
+}
+p{
+  color:cornflowerblue;
+  position: relative;
+  width: 50px;
+  left: 110px;
+
+}
+
+ </style>

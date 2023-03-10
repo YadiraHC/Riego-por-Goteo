@@ -1,17 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+<ion-content class="ion-padding">
+  <ion-icon name="leaf-outline" size="large" color="primary"></ion-icon>
+  
+    <ion-button shape="round">Inicio de Sesion</ion-button>
+  </ion-content>
+  
+    <style>
+      ion-content::part(background) 
+      {
+    background:white;
+  }
+  ion-button{
+    color: white;
+    height: 50px;
+    left: 42px;
+    position: relative;
+    top: 250px;
+    width: 150px;
+  }
+  ion-icon{
+    height: 50px;
+    left: 45px;
+    position: relative;
+    top: 250px;
+    width: 150px;
+  }
+    </style>
+  
+  <!-- Cambios Angel 3.3.23 -->
