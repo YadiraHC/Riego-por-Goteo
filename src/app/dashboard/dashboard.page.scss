@@ -1,29 +1,41 @@
 .titulos{
-    font-family: 'Tilt Warp', cursive;
-    color: antiquewhite;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 1.5rem;
 }
 .titu{
     font-size: 1.2rem;
-    font-family: 'Tilt Warp', cursive;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .fondo{
-    background-color: rgb(172, 8, 49);
+    background-color: #4ad1e9;
+    border-radius: 10px 10px 40px 40px;
+    height: 175px;
+   
+
+
 }
 
 .img{
    width: 130px;
    height: 130px;
-   position: box;
-   float: left;
-   padding-right: 15px;
+   position:relative;
+   margin-left: 30px;
+   float:center;
+   
 }
 .color{
-    background-color: rgb(172, 8, 49);
+    background-color: #67e442;
+    border-radius: 15px;
+
 }
 h1{
-    color: antiquewhite;
-    font-size: 1rem;
-    font-family: 'Roboto Slab', serif;
+    color: rgb(255, 255, 255); 
+    font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.botoncito{
+    margin: .5rem;
 }

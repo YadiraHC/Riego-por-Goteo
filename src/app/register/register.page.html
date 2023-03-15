@@ -13,17 +13,17 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Registro</ion-title>
+    <ion-title class="texto">Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <form>
-    <ion-item lines="full">
+    <ion-item class="texto" lines="full">
       <ion-label position="floating">Primer nombre</ion-label>
       <ion-input type="text" required></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">segundo nombre</ion-label>
+      <ion-label position="floating">Segundo nombre</ion-label>
       <ion-input type="text" required></ion-input>
     </ion-item>
     <ion-item lines="full">
@@ -36,7 +36,7 @@
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit"  (click)="signUp(email, password)" color="danger" expand="block">Registrarse</ion-button>
+        <ion-button type="submit"  (click)="signUp(email, password)" expand="block" color="success">Registrarse</ion-button>
       </ion-col>
     </ion-row>
   </form>

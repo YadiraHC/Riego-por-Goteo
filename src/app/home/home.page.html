@@ -1,28 +1,31 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <ion-icon name="leaf-outline" size="large" color="success"></ion-icon>
+  
+    <ion-button [routerLink]="['/dashboard']" shape="round" color="success">Inicio de Sesion</ion-button>
+    <ion-button [routerLink]="['/register']" shape="round" color="success">Registrate</ion-button>
 
-<ion-content>
-
-</ion-content>
- -->
- <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      SMART GARDEN
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="auth-form">
-  <ion-grid>
-    <ion-row>
-      <ion-col align-self-center>
-        <ion-button [routerLink]="['/register']" expand="block" color="primary">Registrate</ion-button>
-        <span class="already"> o ya eres usuario?</span>
-        <ion-button [routerLink]="['/login']" expand="block" color="danger">Iniciar sesión</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+  </ion-content>
+  
+    <style>
+      ion-content::part(background) 
+      {
+    background:white;
+  }
+  ion-button{
+    color: white;
+    height: 50px;
+    left: 42px;
+    position: relative;
+    top: 250px;
+    width: 150px;
+  }
+  ion-icon{
+    height: 50px;
+    left: 45px;
+    position: relative;
+    top: 250px;
+    width: 150px;
+  }
+    </style>
+  
+  <!-- Cambios Angel 3.3.23 -->

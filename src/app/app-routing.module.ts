@@ -21,12 +21,17 @@ const routes: Routes = [
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
-    path: 'control',
-    loadChildren: () => import('./control/control.module').then( m => m.ControlPageModule)
-  },  {
     path: 'areacontrol',
     loadChildren: () => import('./areacontrol/areacontrol.module').then( m => m.AreacontrolPageModule)
+  },
+  {
+    path: 'graficas',
+    loadChildren: () => import('./graficas/graficas.module').then( m => m.GraficasPageModule)
+  },  {
+    path: 'area2control',
+    loadChildren: () => import('./area2control/area2control.module').then( m => m.Area2controlPageModule)
   }
+
 
 ];
 @NgModule({

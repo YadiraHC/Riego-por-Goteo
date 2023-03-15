@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ControlPageRoutingModule } from './control-routing.module';
+import { Area2controlPageRoutingModule } from './area2control-routing.module';
 
-import { ControlPage } from './control.page';
+import { Area2controlPage } from './area2control.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ControlPageRoutingModule
+    Area2controlPageRoutingModule
   ],
-  declarations: [ControlPage]
+  declarations: [Area2controlPage]
 })
-export class ControlPageModule {}
+export class Area2controlPageModule {}

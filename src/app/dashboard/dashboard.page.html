@@ -1,13 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
- -->
  <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -18,14 +8,20 @@
   <ion-list>
     <ion-item>
       <ion-icon slot="start" name="moon"></ion-icon>
-      <ion-label>Toggle Dark Theme </ion-label>
+      <ion-label>Modo Noche </ion-label>
       <ion-toggle slot="end"
-          [ngModel]="darkMode"
+          [ngModel]="darkMode" 
           (ionChange)="cambio()"></ion-toggle>
     </ion-item>
+    <ion-item>
+      <ion-button [routerLink]="['/home']" class="ion-botoncito">jaja</ion-button>
+    </ion-item>
+    <ion-item>
+      
+    </ion-item>
+      <!-- fin de modo noche -->
+
   </ion-list>
-  <!-- fin de modo noche -->
-  <ion-button [routerLink]="['/home']" class="ion-padding">cerrar sesion</ion-button>
 <!--     <ion-button class="ion-padding">perfil</ion-button> -->
      <!--fin de la barra para menu--->
   </ion-header>
@@ -39,39 +35,35 @@
       </ion-buttons>
       <ion-title class="titu">SMART GARDEN</ion-title>
     </ion-toolbar>
-    <!--inicio del buscador-->
-    <ion-searchbar></ion-searchbar>
-     <!--final del buscador-->
   </ion-header>
   <ion-content class="ion-padding">
     <!--inicio de las cartas-->
-     <!--inicio de las cartas-->
     <ion-card>
       <ion-card-header class="color">
-        <ion-card-title class="titulos" [routerLink]="['/control']" >Area 1</ion-card-title>
+        <ion-card-title class="titulos" [routerLink]="['/areacontrol']" >Area 1</ion-card-title>
        <!--  <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
       </ion-card-header>
     
       <ion-card-content class="fondo">
         <div class="img">
-        <img [routerLink]="['/control']" alt="Silhouette of mountains" src="https://estag.fimagenes.com/img/v2/7e5/1100858_538730_900.jpg" />
-       </div>
-        <h1>Monitoreo del riego y control en su suministro de agua</h1>
+        <img [routerLink]="['/areacontrol']" alt="Silhouette of mountains" src="https://estag.fimagenes.com/img/v2/7e5/1100858_538730_900.jpg" />
+       <h1>Monitoreo del riego y control en su suministro de agua</h1></div>
+        
       </ion-card-content>
     </ion-card>
      <!--inicio de las cartas-->
     <ion-card>
       <ion-card-header class="color">
-        <ion-card-title class="titulos" [routerLink]="['/control']">Area 2</ion-card-title>
+        <ion-card-title class="titulos" [routerLink]="['/are2control']">Area 2</ion-card-title>
        
         <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
       </ion-card-header>
     
       <ion-card-content class="fondo">
         <div class="img">
-        <img [routerLink]="['/control']" alt="Silhouette of mountains" src="https://invernaderomini.online/wp-content/uploads/2022/04/termometro-e-higrometro-para-invernadero.jpg" />
-        </div>
-        <h1>Monitoreo de la temperatura y humedad el suelo</h1>
+        <img [routerLink]="['/area2control']" alt="Silhouette of mountains" src="https://invernaderomini.online/wp-content/uploads/2022/04/termometro-e-higrometro-para-invernadero.jpg" />
+        <h1>Monitoreo de la temperatura y humedad el suelo</h1></div>
+        
       </ion-card-content>
     </ion-card>
      <!--fin de las cartas-->

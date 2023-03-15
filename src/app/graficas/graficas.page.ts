@@ -1,44 +1,56 @@
-import { AfterViewInit, Component, ElementRef,OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, 
+  Component, 
+  ElementRef,OnInit, ViewChild } from '@angular/core';
+//npm i chart.js --save
 import { Chart } from 'chart.js/auto';
+import { RealtimeDatabaseService } from '../services/realtime-database.service';
 @Component({
-  selector: 'app-control',
-  templateUrl: './control.page.html',
-  styleUrls: ['./control.page.scss'],
+  selector: 'app-graficas',
+  templateUrl: './graficas.page.html',
+  styleUrls: ['./graficas.page.scss'],
 })
-export class ControlPage implements AfterViewInit {
+export class GraficasPage implements OnInit, AfterViewInit {
   // Importing ViewChild. We need @ViewChild decorator to get a reference to the local variable 
   // that we have added to the canvas element in the HTML template.
   @ViewChild('doughnutCanvas') private doughnutCanvas!: ElementRef;
   @ViewChild('lineCanvas') private lineCanvas!: ElementRef;
   doughnutChart: any;
   lineChart: any;
-  //modo noche
-  darkMode: boolean = true;
-  constructor() {
-    //modo noche
-    const prefersDarks = window.matchMedia('(prefers-color-scheme: dark)');
-    this.  darkMode = !this.darkMode ;
-    //fin modo noche
+  data: any;
+  private chart: Chart;
+
+  constructor(private dataService: RealtimeDatabaseService ) {
+    
   }
-   //modo noche inicio
-  cambio(){
-    this.  darkMode = !this.darkMode ;
-    document.body.classList.toggle('dark');
+
+  ngOnInit() {
+    this.dataService.getData().subscribe(data => {
+      this.data = data;
+      this.doughnutChartMethod();
+      this.lineChartMethod();
+    });
   }
-  //fin del modo noche
-  // When we try to call our chart to initialize methods in ngOnInit() it shows an error nativeElement of undefined. 
-  // So, we need to call all chart methods in ngAfterViewInit() where @ViewChild and @ViewChildren will be resolved.
+  
   ngAfterViewInit() {
-    this.doughnutChartMethod();
+    this.dataService.getData().subscribe(data => {
+      this.data = data;
+      this.doughnutChartMethod();
+      this.lineChartMethod();
+    });
   }
   doughnutChartMethod() {
+    if (this.doughnutChart) {
+      console.log('algo-|', this.chart)
+      this.doughnutChart.destroy(); // Elimina la instancia anterior
+    }
+    let datos = this.data.historial_temperatura
     this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
       type: 'doughnut',
       data: {
-        labels: ['BJP', 'Congress', 'AAP', 'CPM', 'SP'],
+        labels: Object.keys(datos.historico),
         datasets: [{
-          label: '# of Votes',
-          data: [50, 29, 15, 10, 7],
+          label: datos.tittle,
+          data: Object.values(datos.historico),
           backgroundColor: [
             'rgba(255, 159, 64, 0.2)',
             'rgba(255, 99, 132, 0.2)',
@@ -58,13 +70,17 @@ export class ControlPage implements AfterViewInit {
     });
   }
   lineChartMethod() {
+    if (this.lineChart) {
+      this.lineChart.destroy(); // Elimina la instancia anterior
+    }
+    let datos = this.data.historial_temperatura
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December'],
+        labels: Object.keys(datos.historico),
         datasets: [
           {
-            label: 'Sell per week',
+            label: datos.tittle,
             fill: false,
             backgroundColor: 'rgba(75,192,192,0.4)',
             borderColor: 'rgba(75,192,192,1)',
@@ -81,7 +97,7 @@ export class ControlPage implements AfterViewInit {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [65, 59, 80, 81, 56, 55, 40, 10, 5, 50, 10, 15],
+            data: Object.values(datos.historico),
             spanGaps: false,
           }
         ]

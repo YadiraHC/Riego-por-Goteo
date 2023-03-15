@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ControlPage } from './control.page';
+import { AreacontrolPage } from './areacontrol.page';
 
-describe('ControlPage', () => {
-  let component: ControlPage;
-  let fixture: ComponentFixture<ControlPage>;
+describe('AreacontrolPage', () => {
+  let component: AreacontrolPage;
+  let fixture: ComponentFixture<AreacontrolPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ControlPage ],
+      declarations: [ AreacontrolPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ControlPage);
+    fixture = TestBed.createComponent(AreacontrolPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
